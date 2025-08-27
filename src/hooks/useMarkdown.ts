@@ -9,10 +9,11 @@ export const useMarkdown = (fetch: () => Promise<string>) => {
     fetch()
       .then((markdown) => {
         setMarkdown(markdown);
-        setLoading(false);
       })
       .catch((error) => {
         setMarkdown(`오류가 발생했습니다:\n${error}`);
+      })
+      .finally(() => {
         setLoading(false);
       });
   }, [fetch]);
