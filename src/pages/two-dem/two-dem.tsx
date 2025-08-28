@@ -1,3 +1,5 @@
+import ReactMarkdown from "react-markdown";
+import { useMarkdown } from "../../hooks/useMarkdown";
 import {
   drawScene,
   initBuffers,
@@ -6,8 +8,14 @@ import {
 } from "./utils";
 
 export const TwoDem = () => {
+  const { markdown, loading } = useMarkdown(async () => {
+    const response = await import("./two-dem.md");
+    return response.default;
+  });
+
   return (
     <article>
+      {loading ? <p>Loading...</p> : <ReactMarkdown>{markdown}</ReactMarkdown>}
       <canvas
         width={900}
         height={600}
