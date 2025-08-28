@@ -12,7 +12,7 @@ function Init() {
     const gl = canvas.getContext("webgl");
     if (!gl) return;
 
-    gl.clearColor(0.5, 0.5, 0.5, 1); // Set clear color to black, fully opaque
+    gl.clearColor(0.5, 0.5, 0.5, 1); // Set clear color to gray, fully opaque
     gl.enable(gl.DEPTH_TEST); // Enable depth testing
     gl.depthFunc(gl.LESS); // Near things obscure far things
     gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT); // Clear the color as well as the depth buffer.
@@ -20,7 +20,7 @@ function Init() {
   };
 
   return (
-    <main>
+    <article>
       {loading ? <p>Loading...</p> : <ReactMarkdown>{markdown}</ReactMarkdown>}
       <canvas
         width={900}
@@ -32,7 +32,7 @@ function Init() {
         style={{ border: "1px solid black" }}
       />
 
-    </main>
+    </article>
   );
 }
 
