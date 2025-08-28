@@ -1,6 +1,7 @@
 # WebGL과 canvas 기본 설정
 
 > 참고 링크: <https://developer.mozilla.org/ko/docs/Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL>
+>
 > 목표: WebGL을 이용해 canvas에 회색 화면 보여주기
 
 ## WebGLRenderingContext 가져오기
