@@ -6,6 +6,15 @@ export default function Home() {
     <main>
       <h1>WebGL 연습</h1>
       <p>canvas와 webGL 예제를 공부합니다.</p>
+      <p>참고 자료:</p>
+      <ul>
+        <li>
+          <a href="https://webglfundamentals.org/webgl/lessons/ko/">기초부터 배우는 WebGL</a>
+        </li>
+        <li>
+          <a href="https://developer.mozilla.org/ko/docs/Web/API/WebGL_API/Tutorial">MDN WebGL tutorial</a>
+        </li>
+      </ul>
       <p>현재 구현된 예제 목록:</p>
       <ul>
         {routes.map((route) => (
